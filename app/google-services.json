@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "75863321243",
+    "project_id": "cool-team-backend",
+    "storage_bucket": "cool-team-backend.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:75863321243:android:fb5447af103527fa27b43e",
+        "android_client_info": {
+          "package_name": "org.st991595932.coolteam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcAUODtQBtwOVzRrKsPdZ8OCMv7uiyvhw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
