@@ -2,16 +2,19 @@ package org.st991595932.coolteam.model
 
 import com.google.firebase.Timestamp
 
-class ChatMessageModel(message: String, currentUserId: String, now: Timestamp) {
+class ChatMessageModel {
 
     private lateinit var message: String
     private lateinit var senderId: String
     private lateinit var timestamp: Timestamp
 
-    fun ChatMessageModel() {}
-
-
-    fun getMessage(): String? {
+    constructor(){}
+    constructor(message: String, senderId: String, timestamp: Timestamp){
+        this.message = message
+        this.senderId = senderId
+        this.timestamp = timestamp
+    }
+    fun getMessage(): String {
         return message
     }
 

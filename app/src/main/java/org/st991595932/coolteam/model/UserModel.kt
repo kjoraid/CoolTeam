@@ -42,11 +42,11 @@ class UserModel {
         this.phone  = phone
     }
     fun getUserId(): String {
-        return this.userName
+        return this.userId
     }
 
-    fun setUserId(username: String) {
-        this.userName  = username
+    fun setUserId(userId: String) {
+        this.userId  = userId
     }
 
 

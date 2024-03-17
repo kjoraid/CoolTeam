@@ -4,6 +4,7 @@ import org.st991595932.coolteam.R
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,17 +27,22 @@ class SearchUserRecyclerAdapter(options: FirestoreRecyclerOptions<UserModel>,
     override fun onBindViewHolder(holder: UserModelViewHolder, position: Int, model: UserModel, ) {
         holder.usernameText.text = model.getUsername()
         holder.phoneText.setText(model.getPhone())
+
+        Log.d("Error-UserID",model.getUserId() )
+        Log.d("Error-UserID",FirebaseUtil.currentUserId().toString() )
+
         if (model.getUserId().equals(FirebaseUtil.currentUserId())) {
             holder.usernameText.text = model.getUsername() + " (Me)"
         }
 
-        FirebaseUtil.getOtherProfilePicStorageRef(model.getUserId()).getDownloadUrl()
-            .addOnCompleteListener { t ->
+       FirebaseUtil.getOtherProfilePicStorageRef(model.getUserId()).getDownloadUrl()
+           .addOnCompleteListener { t ->
                 if (t.isSuccessful()) {
                     val uri: Uri = t.getResult()
                     AndroidUtil.setProfilePic(context, uri, holder.profilePic)
                 }
-            }
+           }
+
         holder.itemView.setOnClickListener { v: View? ->
             //navigate to chat activity
             val intent: Intent =

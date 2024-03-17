@@ -2,18 +2,23 @@ package org.st991595932.coolteam.model
 
 import com.google.firebase.Timestamp
 
-class ChatroomModel(
-    chatroomId: String,
-    asList: MutableList<String>,
-    now: Timestamp,
-    s: String,
-    s1: String
-) {
-    private lateinit var chatroomId: String
-    private lateinit var userIds: List<String>
-    private lateinit var lastMessageTimestamp: Timestamp
-    private lateinit var lastMessageSenderId: String
-    private lateinit var lastMessage: String
+class ChatroomModel {
+    private var chatroomId: String = ""
+    private var userIds: List<String> = listOf()
+    private var lastMessageTimestamp: Timestamp? = null
+    private var lastMessageSenderId: String = ""
+    private var lastMessage: String = ""
+
+    constructor(){}
+
+    constructor(chatroomId: String, userIds: List<String>, lastMessageTimestamp:Timestamp,
+                lastMessageSenderId:String, lastMessage:String  ) {
+        this.chatroomId = chatroomId
+        this.userIds = userIds
+        this.lastMessageTimestamp = lastMessageTimestamp
+        this.lastMessageSenderId = lastMessageSenderId
+        this.lastMessage = lastMessage
+    }
 
     fun getChatroomId(): String {
         return chatroomId
@@ -31,7 +36,7 @@ class ChatroomModel(
         this.userIds = userIds
     }
 
-    fun getLastMessageTimestamp(): Timestamp {
+    fun getLastMessageTimestamp(): Timestamp? {
         return lastMessageTimestamp
     }
 
