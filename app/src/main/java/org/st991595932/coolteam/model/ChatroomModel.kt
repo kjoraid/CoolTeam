@@ -37,6 +37,7 @@ class ChatroomModel {
     }
 
     fun getLastMessageTimestamp(): Timestamp? {
+
         return lastMessageTimestamp
     }
 
