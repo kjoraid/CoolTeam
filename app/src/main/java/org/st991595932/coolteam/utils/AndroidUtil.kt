@@ -5,6 +5,8 @@ import android.content.Intent
 import android.net.Uri
 import android.widget.ImageView
 import android.widget.Toast
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 
 
 import org.st991595932.coolteam.model.UserModel
@@ -12,7 +14,7 @@ import org.st991595932.coolteam.model.UserModel
 
 class AndroidUtil {
     companion object {
-        fun showToast(context: Context, message: String) {
+        fun showToast(context: Context?, message: String) {
             Toast.makeText(context, message, Toast.LENGTH_LONG).show()
 
         }
@@ -32,8 +34,12 @@ class AndroidUtil {
         }
 
         fun setProfilePic(context: Context?, imageUri: Uri?, imageView: ImageView?) {
-            //Glide.with(context).load(imageUri).apply(RequestOptions.circleCropTransform())
-             //   .into(imageView)
+            if (context != null) {
+                if (imageView != null) {
+                    Glide.with(context).load(imageUri).apply(RequestOptions.circleCropTransform())
+                       .into(imageView)
+                }
+            }
         }
 
     }

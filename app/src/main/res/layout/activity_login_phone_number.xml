@@ -119,7 +119,7 @@
             android:id="@+id/send_otpButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/btn_rounder_corner"
+            android:background="@drawable/btn_rounded_corner"
             android:text="@string/send_OTP"/>
         <ProgressBar
             android:id="@+id/login_progressBar"

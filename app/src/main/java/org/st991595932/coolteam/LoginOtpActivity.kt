@@ -1,7 +1,6 @@
 package org.st991595932.coolteam
 
 import android.content.Intent
-import android.credentials.Credential
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View

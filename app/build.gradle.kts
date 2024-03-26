@@ -57,6 +57,8 @@ dependencies {
     implementation("androidx.activity:activity:1.8.2")
     implementation("com.google.firebase:firebase-storage-ktx:20.3.0")
     implementation("com.google.ai.client.generativeai:generativeai:0.2.1")
+    implementation("com.github.dhaval2404:imagepicker:2.1")
+    implementation("com.github.bumptech.glide:glide:4.16.0")
 
 
 

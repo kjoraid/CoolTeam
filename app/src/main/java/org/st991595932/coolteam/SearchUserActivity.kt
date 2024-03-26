@@ -57,7 +57,6 @@ class SearchUserActivity : AppCompatActivity() {
             .whereLessThan("username", searchname + "\ufffd")
 
             //.whereLessThan("username", searchname + "\uf8ff")
-
             //.whereGreaterThanOrEqualTo("username", searchInput.text.toString())
 
         var options: FirestoreRecyclerOptions<UserModel> = FirestoreRecyclerOptions.Builder<UserModel>()

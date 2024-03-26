@@ -48,6 +48,7 @@ class LoginUsernameActivity : AppCompatActivity() {
             userNameInput.setError("Username length should be at least 3 chars")
             return
         }
+
         setInProgress(true)
 
         if(userModel!=null){
